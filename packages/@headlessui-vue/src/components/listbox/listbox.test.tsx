@@ -568,6 +568,8 @@ describe('Rendering', () => {
           state: ListboxState.Visible,
           textContent: JSON.stringify({ active: false, selected: false, disabled: false }),
         })
+        const [option] = getListboxOptions()
+        assertListboxOption(option, { attributes: { value: 'a' } })
       })
     )
   })
